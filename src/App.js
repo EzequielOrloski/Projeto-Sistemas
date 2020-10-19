@@ -14,43 +14,56 @@ import MonitorUser from './components/beacons/monitorUser';
 import './App.css';
 
 class App extends Component{
+    alternateNav() {
+        if (document.getElementById("mySidenav").style.width != "0px"){
+            document.getElementById("mySidenav").style.width = "0px";
+        }  
+        else{
+            document.getElementById("mySidenav").style.width = "250px"; 
+        }
+    }
+
     render(){
         return(
         	<Router>
         	<div id="wrapper">
-                <ul className="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-                    <Link to="/dash" className="sidebar-brand d-flex align-items-center justify-content-center">
-                        <div className="sidebar-brand-icon">
-                            <img src={ Logo } alt="logo"/>
+                <div id="mySidenav">
+                    <ul className="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+                        <Link to="/dash" className="sidebar-brand d-flex align-items-center justify-content-center">
+                            <div className="sidebar-brand-icon">
+                                <img src={ Logo } alt="logo"/>
+                            </div>
+                            <div className="sidebar-brand-text mx-3">Indoor Positioning</div>
+                        </Link>
+                        <div className="nav-item active">
+                            <Link to="/dash" className="nav-link"><FaTachometerAlt/><span>Dashboard</span></Link>
                         </div>
-                        <div className="sidebar-brand-text mx-3">Indoor Positioning</div>
-                    </Link>
-                    <li className="nav-item active">
-                        <Link to="/dash" className="nav-link"><FaTachometerAlt/><span>Dashboard</span></Link>
-                    </li>
-                    <hr className="sidebar-divider"/>
-                    <div className="sidebar-heading">Configurações Beacons</div>
-                    <li className="nav-item">
-                        <a className="nav-link collapsed" href="/beacons">
-                        	<FaMapMarked className="far fa-fw"/><span>Adicionar Mapas</span>
-                        </a>
-                        <a className="nav-link collapsed" href="/selectBeacons">
-                            <FaMapMarkerAlt className="far fa-fw"/><span>Selecionar Mapas</span>
-                        </a>
-                    </li>
-                    <hr className="sidebar-divider"/>
-                    <div className="sidebar-heading">Configurações Gerais</div>
-                    <li className="nav-item">
-                        <a className="nav-link collapsed" href="/config">
-                            <BsFillGearFill className="far fa-fw fa-window-maximize"/><span>Configurações</span>
-                        </a>
-                    </li>
-                    <hr className="sidebar-divider"/>
-                </ul>
+                        <hr className="sidebar-divider"/>
+                        <div className="sidebar-heading">Configurações Beacons
+                            <div className="nav-item"> 
+                                <a className="nav-link collapsed" href="/beacons">
+                                    <FaMapMarked className="far fa-fw"/><span>Adicionar Mapas</span>
+                                </a>
+                                <a className="nav-link collapsed" href="/selectBeacons">
+                                    <FaMapMarkerAlt className="far fa-fw"/><span>Selecionar Mapas</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr className="sidebar-divider"/>
+                        <div className="sidebar-heading">Configurações Gerais
+                            <div className="nav-item">
+                                <a className="nav-link collapsed" href="/config">
+                                    <BsFillGearFill className="far fa-fw fa-window-maximize"/><span>Configurações</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr className="sidebar-divider"/>
+                    </ul>
+                </div>
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
                         <nav className="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-                            <button id="sidebarToggleTop" className="btn-top">
+                            <button id="sidebarToggleTop" onClick={this.alternateNav} className="btn-top">
                                 <FaBars/>
                             </button>
                             <ul className="navbar-nav ml-auto">

@@ -28,6 +28,8 @@ svg{
     margin-right: 10px;
     margin-bottom: 4px;
 }
+
+
 .sidebar .nav-item.active .nav-link {
     font-weight: 500;
 }
@@ -69,30 +71,6 @@ svg{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -453,10 +431,10 @@ svg{
   content: '\f107'
 }
 
-.sidebar .nav-item .nav-link,
+/* .sidebar .nav-item .nav-link,
 .topbar .nav-item .nav-link {
-  position: relative
-}
+   position: relative 
+}  */
 
 .sidebar .nav-item .nav-link .badge-counter,
 .topbar .nav-item .nav-link .badge-counter {
@@ -636,6 +614,7 @@ svg{
 }
 
 .sidebar {
+  transition: 0.5s;
   min-height: 100vh;
   width: 14rem !important;
   background-color: #fff !important;
@@ -645,7 +624,7 @@ svg{
 }
 
 .sidebar .nav-item {
-  position: relative;
+  /* position: relative; */
   margin-bottom: -15px
 }
 
@@ -661,7 +640,7 @@ svg{
 .sidebar .nav-item .nav-link span {
   font-size: .85rem;
   display: inline
-}
+} 
 
 
 
@@ -915,7 +894,7 @@ svg{
   padding: 3rem !important
 }
 
-@media (max-width:768px) {
+@media (max-width:200px) {
   #container-wrapper {
       min-width: 100vw
   }
@@ -1055,7 +1034,7 @@ svg{
   }
 
   .sidebar.toggled .sidebar-heading {
-      display: block;
+       display: block; 
       text-align: left;
       padding: 0 1rem;
       font-weight: 800;
@@ -1067,10 +1046,11 @@ svg{
       display: inline
   }
 
+ 
   .sidebar {
       width: 0 !important;
       overflow: hidden;
-      transition: all .3s ease;
+      transition: 0.5s;
       -webkit-transition: all .3s ease
   }
 
@@ -1226,6 +1206,7 @@ svg{
 .sidebar-dark.toggled #sidebarToggle::after {
   color: rgba(255, 255, 255, .5)
 }
+
 
 .btn-icon-split {
   padding: 0;
