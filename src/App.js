@@ -26,7 +26,7 @@ class App extends Component{
     render(){
         return(
         	<Router>
-        	<div id="wrapper">
+        	<div id="wrapper"> 
                 <div id="mySidenav">
                     <ul className="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
                         <Link to="/dash" className="sidebar-brand d-flex align-items-center justify-content-center">

@@ -1306,7 +1306,7 @@ svg{
 
 @media (min-width:768px) {
   .chart-bar {
-      height: 20rem
+      height: 20rem 
   }
 }
 
