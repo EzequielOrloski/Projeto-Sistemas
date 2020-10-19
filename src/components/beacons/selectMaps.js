@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaSearchLocation } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import casa from '../../fonts/casa.svg';
@@ -16,7 +16,7 @@ const Beacons = props => (
 				<Row>
 					<Col><Link to={"/edit/"+props.planner._id}><FaEdit/></Link></Col>
 					<Col><a href="/selectBeacons" onClick={() => { props.deletePlanner(props.planner._id) }}><MdDeleteForever/></a></Col>
-					<Col><Link to={"/floorplan/"+props.planner._id}><FaEdit/></Link></Col>
+					<Col><Link to={"/floorplan/"+props.planner._id}><FaSearchLocation/></Link></Col>
 				</Row>
 			</ListGroupItem>
 		</ListGroup>

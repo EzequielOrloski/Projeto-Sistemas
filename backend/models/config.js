@@ -6,6 +6,7 @@ const ConfigSchema = new Schema({
 	topicoin: { type: String, required: true },
 	topicoou: { type: String, required: true },
 	unidades: { type: String, required: true },
+	db: { type: String, required: true },
 	}
 );
 

@@ -44,7 +44,7 @@ router.put('/:id', async (req, res) => {
         console.log(config);
         return res.send({ config });
     }catch(err){
-        return res.status(400).send({ error: "Não foi possivel atualizar o beacon!" });
+        return res.status(400).send({ error: "Não foi possivel atualizar as configuraçãoe!" });
     }
 });
 module.exports = router;
