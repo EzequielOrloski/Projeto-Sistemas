@@ -1,0 +1,15 @@
+.map{
+	height: calc(100vh - 4.375rem);
+	background-color: white;
+}
+.card{
+	width: 100%;
+}
+.mapas{
+	margin: 10px;
+}
+#canva{
+    background:url("../../fonts/casa.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
