@@ -40,7 +40,7 @@ class App extends Component{
                         </div>
                         <hr className="sidebar-divider"/>
                         <div className="sidebar-heading">Configurações Beacons
-                            <div className="nav-item"> 
+                            <div className="nav-item">  
                                 <a className="nav-link collapsed" href="/beacons">
                                     <FaMapMarked className="far fa-fw"/><span>Adicionar Mapas</span>
                                 </a>
